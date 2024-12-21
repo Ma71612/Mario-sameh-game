@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mario Sameh - The Famous Gamer</title>
+    <style>
+        /* قاعدة عامة لتنسيق جميع العناصر */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* General settings */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Header */
+        header {
+            background-color: #222;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -50%;
+            width: 200%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            animation: fadeIn 2s;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Navigation bar */
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.1em;
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        nav ul li a::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #4CAF50;
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s;
+        }
+
+        nav ul li a:hover::before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+
+        /* Article container */
+        .article-container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .article-container:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .article-container h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .article-container .meta {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 20px;
+        }
+
+        .article-container img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            animation: zoomIn 2s;
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .article-container p {
+            line-height: 1.8;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        .article-container blockquote {
+            border-left: 4px solid #4CAF50;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            font-style: italic;
+            margin: 20px 0;
+            color: #555;
+            animation: slideIn 1.5s;
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(-20px); opacity: 0; }
+            100% { transform: translateX(0); opacity: 1; }
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Mario Sameh - The Famous Gamer</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Mario</a></li>
+        <li><a href="#">Games</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Contact Us</a></li>
+    </ul>
+</nav>
+
+<div class="article-container">
+    <h2>Mario Sameh - Gaming Legend</h2>
+    <p class="meta">Published on: December 21, 2024 | Author: Mohammed Ali</p>
+
+    <img src="https://via.placeholder.com/800x400" alt="Mario Sameh">
+
+    <p>
+        Mario Sameh is one of the most famous Arab gamers, a well-known figure in the gaming community. 
+        He is renowned for his unique style and great passion for games. He started his journey in the gaming world years ago, 
+        and now he is an inspiration for millions of fans worldwide.
+    </p>
+
+    <blockquote>
+        "Gaming is not just a hobby; it's an art that requires passion and creativity." - Mario Sameh
+    </blockquote>
+
+    <p>
+        You can follow Mario Sameh on various social media platforms to enjoy his entertaining content 
+        and stay updated with the latest gaming news.
+    </p>
+</div>
+
+<footer>
+    <p>© 2024 Mario Sameh. All rights reserved.</p>
+</footer>
+
+<script>
+    // JavaScript to add scroll effect
+    document.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.style.backgroundColor = '#000';
+            header.style.transition = 'background-color 0.5s';
+        } else {
+            header.style.backgroundColor = '#222';
+        }
+    });
+</script>
+
+</body>
+</html>
